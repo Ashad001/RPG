@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
     private BoxCollider2D PlayerCollider;
     private Vector3 move;
+    private RaycastHit2D Hit;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +31,16 @@ public class Player : MonoBehaviour
         else if (move.x > 0)
             transform.localScale = Vector3.one;
 
-        transform.Translate(move * Time.deltaTime);
+        Hit = Physics2D.BoxCast(transform.position, PlayerCollider.size, 0, new Vector2(0, move.y), Mathf.Abs(move.y * Time.deltaTime), LayerMask.GetMask("Character", "Blocking"));
+        if(Hit.collider == null)
+        {
+            transform.Translate(0, move.y * Time.deltaTime, 0);
+        }
+        Hit = Physics2D.BoxCast(transform.position, PlayerCollider.size, 0, new Vector2(move.x, 0), Mathf.Abs(move.x * Time.deltaTime), LayerMask.GetMask("Character", "Blocking"));
+        if (Hit.collider == null)
+        {
+            transform.Translate(move.x * Time.deltaTime, 0 ,0);
+        }
+
     }
 }

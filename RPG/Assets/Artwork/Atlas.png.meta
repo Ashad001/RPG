@@ -180,7 +180,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -188,6 +188,48 @@ TextureImporter:
       bones: []
       spriteID: 05972400e823551428adccaad9ce355a
       internalID: -1585191383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall_0
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc5df58d0182354419d95a47654cb5c1
+      internalID: -1652389128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Floor_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87c362ed161fb894bafe531350413cd5
+      internalID: -478970189
       vertices: []
       indices: 
       edges: []
@@ -204,8 +246,10 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Player_2: -1585191383
+      Wall_0: -1652389128
       Player_1: 1397618325
       Player_0: 1343460700
+      Floor_0: -478970189
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
